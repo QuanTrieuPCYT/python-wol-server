@@ -1,0 +1,6 @@
+FROM python:3.13-alpine
+WORKDIR /python-wol-server
+COPY . .
+RUN adduser -D wol
+USER wol
+CMD ["python3.13", "./main.py"]
